@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gg</title>
+</head>
+
+
+<body>
+    
+    <div>
+        <label for="dispositivosDeAudio">Micrófono:</label><br>
+        <select name="dispositivosDeAudio" id="dispositivosDeAudio"></select>
+        <br><br>
+        <label for="dispositivosDeVideo">Cámara:</label><br>
+        <select name="dispositivosDeVideo" id="dispositivosDeVideo"></select>
+        <br><br>
+        <video muted="muted" id="video"></video>
+        <br><br>
+        <p id="duracion"></p>
+        <br>
+        <button id="btnComenzarGrabacion">Comenzar</button>
+        <button id="btnDetenerGrabacion">Detener</button>
+    </div>
+    <script src="script.js"></script>
+    <?php
+    
+  
+ require guardar.php;
+
+if (count($_FILES) <= 0 || empty($_FILES["video"])) {
+    
+
+}else{
+    header("Status: 301 Moved Permanently");
+header("Location: http://localhost/videos/mostrarvideos.php");
+exit;
+}
+
+
+     ?>
+
+</body>
+
+</html>
